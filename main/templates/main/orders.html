@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+
+
+{% block content %}
+
+<table class="table table-hover table-dark table-striped table-bordered">
+  <thead style="height:80px;">
+    <tr class="table-dark text-center align-middle">
+      <th scope="col">No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for oritem in oritems  %}
+
+    <tr class="text-center">
+      <th scope="row">{{ oritem.pk }}</th>
+      <td>{{ oritem.name }}</td>
+      <td>{{ oritem.price }}$</td>
+
+    </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+
+{% endblock %}
